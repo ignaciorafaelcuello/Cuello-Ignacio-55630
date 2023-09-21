@@ -1,0 +1,20 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    
+{% endblock titulo %}    
+
+
+{% block contenido %}
+    <center><h1>{{ titulo }}</h1></center>
+    <center>
+    {% for i in intereses %}
+        <tr>
+            <td>{{ i.intereses }}</td>
+        </tr>
+    {% endfor %}
+    </center>
+    
+{% endblock contenido %}

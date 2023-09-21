@@ -1,0 +1,18 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block tituo %}
+    
+{% endblock tituo %}
+
+
+{% block contenido %}
+    <center><h2>Buscar Jugador</h2></center>
+    <center>
+        <form action = "/buscar2" method = "get">
+            {% csrf_token %}
+            <p>Buscar: <input type = "text" name = "buscar" id = 'buscar'></p>
+            <input type = "submit" value = "Buscar">
+        </form>
+    </center>    
+{% endblock contenido %}

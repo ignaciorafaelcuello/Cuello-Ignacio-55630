@@ -1,0 +1,20 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Directores Tecnicos
+{% endblock titulo %}
+
+
+{% block contenido %}
+    <h2>Director Tecnico</h2>
+    <form action = "" method="POST">
+        {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <input type = "submit" value = 'enviar'>
+    </form>
+{% endblock contenido %}
+    
+    

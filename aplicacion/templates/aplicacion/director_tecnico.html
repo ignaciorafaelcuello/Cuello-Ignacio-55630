@@ -1,0 +1,61 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+
+{% endblock titulo %}
+   
+
+{% block contenido %}
+    <center><table>
+        <tr>
+            <td width="200"><h2>Directores Tecnicos</h2></td>
+            <td>
+                <a
+                href = "{% url 'createDT' %}"
+                class="btn btn-primary btn-sm">
+                <i class="fa fa-plus fa-lg" title="New Record"></i>
+            </a>
+            </td>
+        </tr>
+    </table></center>
+
+    <center><table class="taable">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Numero</th>
+                <th>Antiguedad</th>
+                <th>Ganado</th>
+                <th>Clubes</th>
+                <th>Acciones</th>
+            </tr>
+            {% for i in director_tecnico %}
+                <tr>
+                    <td>{{ i.nombre }}</td>
+                    <td>{{ i.edad }}</td>
+                    <td>{{ i.numero }}</td>
+                    <td>{{ i.antiguedad }}</td>
+                    <td>{{ i.ganado }}</td>
+                    <td>{{ i.clubes }}</td>
+                    <td>
+                        <a
+                        href="{% url 'updateDT' i.id %}"
+                        class="btn btn-primary"
+                        style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: .5rem; --bs-btn-font-si: .5rem">
+                        <i class="fa fa-edit fa-sm" title="Edit Record"></i>
+                    </a>
+                    <a
+                        href="{% url 'deleteDT' i.id %}"
+                        class="btn btn-primary"
+                        style="--bs-btn-padding-y: .5rem; --bs-btn-padding-x: .5rem; --bs-btn-font-si: .5rem">
+                        <i class="fa fa-delete fa-sm" title="Delete Record"></i>
+                    </a>
+                    </td>
+                </tr>           
+            {% endfor %}
+        </thead>
+    </table></center>
+    
+{% endblock contenido %}

@@ -1,0 +1,20 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    
+{% endblock titulo %}
+
+
+{% block contenido %}
+    <h2>Intereses</h2>
+    <form action = "" method="POST">
+        {% csrf_token %}
+        <div class = 'text-center'>
+            <h3>¿Ud desea elimar su interes? <p style="color: red;"> {{ object }}</p></h3>
+        </div>
+        <div class = "text-center"> 
+            <input type="submit" class="btn btn-primary btn-block" value = 'Confirmar'>
+        </div>
+    </form>
+{% endblock contenido %}

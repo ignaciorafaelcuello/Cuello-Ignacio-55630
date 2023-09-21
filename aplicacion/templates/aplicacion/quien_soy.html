@@ -1,0 +1,22 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}  
+    
+{% endblock titulo %}
+   
+
+{% block contenido %}
+    <center><h1>{{ titulo }}</h1></center>
+    <table>        
+        {% for i in quien_soy  %}
+            <center><td>{{ i.quien_soy}}</td></center>            
+        {% endfor %}            
+    </table>
+
+    
+     
+{% endblock contenido %}
+
+    

@@ -1,0 +1,39 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+
+{% endblock titulo %}
+   
+
+{% block contenido %}
+    <center><h1>{{ titulo }}</h1></center>
+
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Numero</th>
+            <th>Antiguedad</th>
+            <th>Ganado</th>
+            <th>Clubes</th>
+        </tr>
+
+    {% for i in jugadores %}
+        <tr>
+            <td>{{ i.id }}</td>
+            <td>{{ i.nombre }}</td>
+            <td>{{ i.edad }}</td>
+            <td>{{ i.numero }}</td>
+            <td>{{ i.antiguedad }}</td>
+            <td>{{ i.ganado }}</td>
+            <td>{{ i.clubes }}</td>    
+        
+    {% endfor %}
+    </table>
+    
+{% endblock contenido %}
+
+
+      

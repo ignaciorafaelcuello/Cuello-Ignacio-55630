@@ -1,0 +1,21 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    
+{% endblock titulo %}    
+
+
+{% block contenido %}
+    <center><h1>{{ titulo }}</h1></center>
+    <center>
+    {% for i in cancion %}
+        <tr>
+            <td>{{ i.nombre }}</td>
+            <td>{{ i.letra }}</td>
+            <br>
+    {% endfor %}
+    </center>
+    
+{% endblock contenido %}

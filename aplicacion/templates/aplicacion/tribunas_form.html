@@ -1,0 +1,18 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Tribunas
+{% endblock titulo %}
+
+
+{% block contenido %}
+    <h2>Tribunas</h2>
+    <form action = "" method="POST">
+        {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <input type = "submit" value = 'Enviar'>
+    </form>
+{% endblock contenido %}

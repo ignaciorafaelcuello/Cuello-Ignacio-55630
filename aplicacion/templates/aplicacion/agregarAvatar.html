@@ -1,0 +1,20 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block tituo %}
+    Agregar Avatar
+{% endblock tituo %}
+
+
+{% block contenido %}
+    <center><h2>Agregar Avatar</h2></center>
+    <center>
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table>
+                {{form.as_table}}
+            </table>
+            <input type="submit" value="Crear Avatar">
+        </form>
+        </center>    
+{% endblock contenido %}

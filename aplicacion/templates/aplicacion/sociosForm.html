@@ -1,0 +1,23 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block tituo %}
+    
+{% endblock tituo %}
+
+
+{% block contenido %}
+    <center><h2>Adhesion de socios</h2></center>
+    <center>
+        <form action="" method="post">
+            {% csrf_token %}
+            <p>Nombre: <input type="text" name="nombre" id='nombre', required = True></p>
+            <p>Apellido: <input type="text" name="apellido" id='apellido', required = True></p>
+            <p>DNI: <input type="number" name="dni" id='dni', required = True></p>
+            <p>Email: <input type="email" name="email" id='email', required = True></p>
+            <p>Direccion: <input type="text" name="direccion" id='direccion', required = True></p>
+            <p>Numero: <input type="number" name="numero" id='numero', required = True></p>
+            <input type="submit" value="Registrar">
+        </form>
+        </center>    
+{% endblock contenido %}

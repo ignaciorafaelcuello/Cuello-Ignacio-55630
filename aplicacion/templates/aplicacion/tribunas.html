@@ -1,0 +1,23 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    
+{% endblock titulo %}    
+
+
+{% block contenido %}
+    <center><h1>{{ titulo }}</h1></center>
+    <center>
+    {% for i in tribunas %}
+        <tr>
+            <td>{{ i.nombre }}</td>
+            <td>{{ i.capacidad }}</td>
+            <td>{{ i.ingreso }}</td>
+            <br>
+    {% endfor %}
+    </center>
+    
+{% endblock contenido %}
+       
